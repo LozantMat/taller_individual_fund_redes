@@ -1,0 +1,1 @@
+# taller_individual_fund_redes
