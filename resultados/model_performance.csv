@@ -1,0 +1,2 @@
+Model Name,Epochs,Accuracy,Precision (weighted),Recall (weighted),F1-score (weighted),Training Loss,Test Loss,Best Epoch (min Test Loss),Min Test Loss
+Baseline MLP 64x64 Momentum,100,0.9787142857142858,0.9787267382838359,0.9787142857142858,0.9787060166408975,7.72188021633027e-05,0.13216043803720431,7,0.08882616533138764
