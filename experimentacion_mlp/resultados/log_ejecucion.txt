@@ -1,0 +1,261 @@
+Datos: train=50400, val=5600, test=14000, features=784  |  procesos en paralelo: 8
+
+####################################################################################################
+# Etapa: Baseline (64x64, momentum, lr 0.01) (1 corridas nuevas)
+####################################################################################################
+[baseline] inicio (55050 parámetros; cambios: ninguno)
+[baseline] Época 1/100 | pérdida ent. 0.3097 | pérdida val. 0.2048 | acc val. 0.9411 | acc prueba 0.9444
+[baseline] Época 10/100 | pérdida ent. 0.0349 | pérdida val. 0.1049 | acc val. 0.9693 | acc prueba 0.9710
+[baseline] Época 20/100 | pérdida ent. 0.0051 | pérdida val. 0.1221 | acc val. 0.9723 | acc prueba 0.9746
+[baseline] Época 30/100 | pérdida ent. 0.0005 | pérdida val. 0.1257 | acc val. 0.9757 | acc prueba 0.9770
+[baseline] Época 40/100 | pérdida ent. 0.0003 | pérdida val. 0.1337 | acc val. 0.9755 | acc prueba 0.9769
+[baseline] Época 50/100 | pérdida ent. 0.0002 | pérdida val. 0.1389 | acc val. 0.9759 | acc prueba 0.9767
+[baseline] Época 60/100 | pérdida ent. 0.0002 | pérdida val. 0.1422 | acc val. 0.9759 | acc prueba 0.9763
+[baseline] Época 70/100 | pérdida ent. 0.0001 | pérdida val. 0.1455 | acc val. 0.9761 | acc prueba 0.9764
+[baseline] Época 80/100 | pérdida ent. 0.0001 | pérdida val. 0.1479 | acc val. 0.9759 | acc prueba 0.9766
+[baseline] Época 90/100 | pérdida ent. 0.0001 | pérdida val. 0.1502 | acc val. 0.9759 | acc prueba 0.9764
+[baseline] Época 100/100 | pérdida ent. 0.0001 | pérdida val. 0.1525 | acc val. 0.9761 | acc prueba 0.9762
+[baseline] fin: 100 épocas en 1.0 min | mejor época 100 | acc val. 0.9761 | acc prueba 0.9762
+
+####################################################################################################
+# Etapa: Etapa 1: tasa de dropout (3 corridas nuevas)
+####################################################################################################
+[64x64_do0.1_lr0.01_es] inicio (55050 parámetros; cambios: dropout: 0.0 -> 0.1; epochs: 100 -> 150; early_stopping: no -> monitor=val_loss, patience=30, min_delta=0.0001, restore_best=True)
+[64x64_do0.2_lr0.01_es] inicio (55050 parámetros; cambios: dropout: 0.0 -> 0.2; epochs: 100 -> 150; early_stopping: no -> monitor=val_loss, patience=30, min_delta=0.0001, restore_best=True)
+[64x64_do0.4_lr0.01_es] inicio (55050 parámetros; cambios: dropout: 0.0 -> 0.4; epochs: 100 -> 150; early_stopping: no -> monitor=val_loss, patience=30, min_delta=0.0001, restore_best=True)
+[64x64_do0.1_lr0.01_es] Época 1/150 | pérdida ent. 0.3838 | pérdida val. 0.1997 | acc val. 0.9402 | acc prueba 0.9412
+[64x64_do0.2_lr0.01_es] Época 1/150 | pérdida ent. 0.4595 | pérdida val. 0.2103 | acc val. 0.9377 | acc prueba 0.9389
+[64x64_do0.4_lr0.01_es] Época 1/150 | pérdida ent. 0.6663 | pérdida val. 0.2716 | acc val. 0.9255 | acc prueba 0.9260
+[64x64_do0.1_lr0.01_es] Época 10/150 | pérdida ent. 0.0826 | pérdida val. 0.0986 | acc val. 0.9709 | acc prueba 0.9714
+[64x64_do0.2_lr0.01_es] Época 10/150 | pérdida ent. 0.1230 | pérdida val. 0.1042 | acc val. 0.9671 | acc prueba 0.9678
+[64x64_do0.4_lr0.01_es] Época 10/150 | pérdida ent. 0.2437 | pérdida val. 0.1538 | acc val. 0.9571 | acc prueba 0.9565
+[64x64_do0.1_lr0.01_es] Época 20/150 | pérdida ent. 0.0542 | pérdida val. 0.0920 | acc val. 0.9739 | acc prueba 0.9745
+[64x64_do0.2_lr0.01_es] Época 20/150 | pérdida ent. 0.0933 | pérdida val. 0.0966 | acc val. 0.9738 | acc prueba 0.9736
+[64x64_do0.4_lr0.01_es] Época 20/150 | pérdida ent. 0.1996 | pérdida val. 0.1357 | acc val. 0.9620 | acc prueba 0.9595
+[64x64_do0.1_lr0.01_es] Época 30/150 | pérdida ent. 0.0421 | pérdida val. 0.0911 | acc val. 0.9743 | acc prueba 0.9758
+[64x64_do0.2_lr0.01_es] Época 30/150 | pérdida ent. 0.0770 | pérdida val. 0.0968 | acc val. 0.9736 | acc prueba 0.9739
+[64x64_do0.4_lr0.01_es] Época 30/150 | pérdida ent. 0.1820 | pérdida val. 0.1254 | acc val. 0.9659 | acc prueba 0.9674
+[64x64_do0.1_lr0.01_es] Época 40/150 | pérdida ent. 0.0355 | pérdida val. 0.0922 | acc val. 0.9754 | acc prueba 0.9753
+[64x64_do0.2_lr0.01_es] Época 40/150 | pérdida ent. 0.0682 | pérdida val. 0.0959 | acc val. 0.9707 | acc prueba 0.9738
+[64x64_do0.4_lr0.01_es] Época 40/150 | pérdida ent. 0.1702 | pérdida val. 0.1219 | acc val. 0.9654 | acc prueba 0.9677
+[64x64_do0.1_lr0.01_es] Época 50/150 | pérdida ent. 0.0337 | pérdida val. 0.0971 | acc val. 0.9755 | acc prueba 0.9774
+[64x64_do0.2_lr0.01_es] Época 50/150 | pérdida ent. 0.0634 | pérdida val. 0.1020 | acc val. 0.9725 | acc prueba 0.9754
+[64x64_do0.4_lr0.01_es] Época 50/150 | pérdida ent. 0.1600 | pérdida val. 0.1289 | acc val. 0.9629 | acc prueba 0.9681
+[64x64_do0.1_lr0.01_es] Época 60/150 | pérdida ent. 0.0304 | pérdida val. 0.0970 | acc val. 0.9750 | acc prueba 0.9757
+[64x64_do0.2_lr0.01_es] Época 60/150 | pérdida ent. 0.0541 | pérdida val. 0.0974 | acc val. 0.9762 | acc prueba 0.9769
+[64x64_do0.4_lr0.01_es] Época 60/150 | pérdida ent. 0.1545 | pérdida val. 0.1219 | acc val. 0.9677 | acc prueba 0.9681
+[64x64_do0.1_lr0.01_es] Época 70/150 | pérdida ent. 0.0256 | pérdida val. 0.0958 | acc val. 0.9788 | acc prueba 0.9771
+[64x64_do0.2_lr0.01_es] Época 70/150 | pérdida ent. 0.0556 | pérdida val. 0.0994 | acc val. 0.9738 | acc prueba 0.9749
+[64x64_do0.2_lr0.01_es] Época 71/150 | pérdida ent. 0.0535 | pérdida val. 0.1024 | acc val. 0.9729 | acc prueba 0.9751
+[64x64_do0.2_lr0.01_es] Early stopping en la época 71; mejor época: 41
+[64x64_do0.2_lr0.01_es] fin: 71 épocas en 0.9 min | mejor época 41 | acc val. 0.9748 | acc prueba 0.9745
+[64x64_do0.4_lr0.01_es] Época 70/150 | pérdida ent. 0.1521 | pérdida val. 0.1217 | acc val. 0.9671 | acc prueba 0.9679
+[64x64_do0.1_lr0.01_es] Época 77/150 | pérdida ent. 0.0242 | pérdida val. 0.1024 | acc val. 0.9761 | acc prueba 0.9769
+[64x64_do0.1_lr0.01_es] Early stopping en la época 77; mejor época: 47
+[64x64_do0.1_lr0.01_es] fin: 77 épocas en 0.9 min | mejor época 47 | acc val. 0.9780 | acc prueba 0.9769
+[64x64_do0.4_lr0.01_es] Época 80/150 | pérdida ent. 0.1460 | pérdida val. 0.1293 | acc val. 0.9657 | acc prueba 0.9677
+[64x64_do0.4_lr0.01_es] Época 90/150 | pérdida ent. 0.1461 | pérdida val. 0.1340 | acc val. 0.9657 | acc prueba 0.9669
+[64x64_do0.4_lr0.01_es] Época 100/150 | pérdida ent. 0.1356 | pérdida val. 0.1271 | acc val. 0.9645 | acc prueba 0.9681
+[64x64_do0.4_lr0.01_es] Early stopping en la época 100; mejor época: 70
+[64x64_do0.4_lr0.01_es] fin: 100 épocas en 1.3 min | mejor época 70 | acc val. 0.9671 | acc prueba 0.9679
+
+>> Mejor dropout: 0.1 (64x64_do0.1_lr0.01_es)
+
+####################################################################################################
+# Etapa: Etapa 2: learning rate (4 corridas nuevas)
+####################################################################################################
+[64x64_do0.1_lr0.005_es] inicio (55050 parámetros; cambios: dropout: 0.0 -> 0.1; learning_rate: 0.01 -> 0.005; epochs: 100 -> 150; early_stopping: no -> monitor=val_loss, patience=30, min_delta=0.0001, restore_best=True)
+[64x64_do0.1_lr0.015_es] inicio (55050 parámetros; cambios: dropout: 0.0 -> 0.1; learning_rate: 0.01 -> 0.015; epochs: 100 -> 150; early_stopping: no -> monitor=val_loss, patience=30, min_delta=0.0001, restore_best=True)
+[64x64_do0.1_lr0.0075_es] inicio (55050 parámetros; cambios: dropout: 0.0 -> 0.1; learning_rate: 0.01 -> 0.0075; epochs: 100 -> 150; early_stopping: no -> monitor=val_loss, patience=30, min_delta=0.0001, restore_best=True)
+[64x64_do0.1_lr0.02_es] inicio (55050 parámetros; cambios: dropout: 0.0 -> 0.1; learning_rate: 0.01 -> 0.02; epochs: 100 -> 150; early_stopping: no -> monitor=val_loss, patience=30, min_delta=0.0001, restore_best=True)
+[64x64_do0.1_lr0.005_es] Época 1/150 | pérdida ent. 0.4570 | pérdida val. 0.2314 | acc val. 0.9330 | acc prueba 0.9349
+[64x64_do0.1_lr0.0075_es] Época 1/150 | pérdida ent. 0.4119 | pérdida val. 0.2110 | acc val. 0.9382 | acc prueba 0.9412
+[64x64_do0.1_lr0.015_es] Época 1/150 | pérdida ent. 0.3582 | pérdida val. 0.1811 | acc val. 0.9427 | acc prueba 0.9479
+[64x64_do0.1_lr0.02_es] Época 1/150 | pérdida ent. 0.3498 | pérdida val. 0.1860 | acc val. 0.9430 | acc prueba 0.9448
+[64x64_do0.1_lr0.005_es] Época 10/150 | pérdida ent. 0.0936 | pérdida val. 0.0990 | acc val. 0.9695 | acc prueba 0.9717
+[64x64_do0.1_lr0.0075_es] Época 10/150 | pérdida ent. 0.0834 | pérdida val. 0.1020 | acc val. 0.9670 | acc prueba 0.9719
+[64x64_do0.1_lr0.015_es] Época 10/150 | pérdida ent. 0.0796 | pérdida val. 0.1074 | acc val. 0.9691 | acc prueba 0.9696
+[64x64_do0.1_lr0.02_es] Época 10/150 | pérdida ent. 0.0855 | pérdida val. 0.1058 | acc val. 0.9686 | acc prueba 0.9716
+[64x64_do0.1_lr0.005_es] Época 20/150 | pérdida ent. 0.0604 | pérdida val. 0.0893 | acc val. 0.9741 | acc prueba 0.9746
+[64x64_do0.1_lr0.0075_es] Época 20/150 | pérdida ent. 0.0528 | pérdida val. 0.0892 | acc val. 0.9743 | acc prueba 0.9760
+[64x64_do0.1_lr0.015_es] Época 20/150 | pérdida ent. 0.0557 | pérdida val. 0.0969 | acc val. 0.9736 | acc prueba 0.9744
+[64x64_do0.1_lr0.02_es] Época 20/150 | pérdida ent. 0.0599 | pérdida val. 0.0977 | acc val. 0.9736 | acc prueba 0.9758
+[64x64_do0.1_lr0.005_es] Época 30/150 | pérdida ent. 0.0468 | pérdida val. 0.0854 | acc val. 0.9750 | acc prueba 0.9768
+[64x64_do0.1_lr0.0075_es] Época 30/150 | pérdida ent. 0.0419 | pérdida val. 0.0948 | acc val. 0.9757 | acc prueba 0.9771
+[64x64_do0.1_lr0.015_es] Época 30/150 | pérdida ent. 0.0445 | pérdida val. 0.0985 | acc val. 0.9741 | acc prueba 0.9770
+[64x64_do0.1_lr0.02_es] Época 30/150 | pérdida ent. 0.0497 | pérdida val. 0.1046 | acc val. 0.9738 | acc prueba 0.9761
+[64x64_do0.1_lr0.005_es] Época 40/150 | pérdida ent. 0.0368 | pérdida val. 0.0944 | acc val. 0.9750 | acc prueba 0.9766
+[64x64_do0.1_lr0.0075_es] Época 40/150 | pérdida ent. 0.0349 | pérdida val. 0.0975 | acc val. 0.9736 | acc prueba 0.9769
+[64x64_do0.1_lr0.015_es] Época 40/150 | pérdida ent. 0.0387 | pérdida val. 0.0956 | acc val. 0.9754 | acc prueba 0.9761
+[64x64_do0.1_lr0.02_es] Época 40/150 | pérdida ent. 0.0437 | pérdida val. 0.1123 | acc val. 0.9727 | acc prueba 0.9752
+[64x64_do0.1_lr0.02_es] Época 41/150 | pérdida ent. 0.0427 | pérdida val. 0.1152 | acc val. 0.9707 | acc prueba 0.9759
+[64x64_do0.1_lr0.02_es] Early stopping en la época 41; mejor época: 11
+[64x64_do0.1_lr0.02_es] fin: 41 épocas en 0.5 min | mejor época 11 | acc val. 0.9718 | acc prueba 0.9756
+[64x64_do0.1_lr0.0075_es] Época 46/150 | pérdida ent. 0.0341 | pérdida val. 0.0972 | acc val. 0.9738 | acc prueba 0.9782
+[64x64_do0.1_lr0.0075_es] Early stopping en la época 46; mejor época: 16
+[64x64_do0.1_lr0.0075_es] fin: 46 épocas en 0.6 min | mejor época 16 | acc val. 0.9752 | acc prueba 0.9763
+[64x64_do0.1_lr0.005_es] Época 50/150 | pérdida ent. 0.0332 | pérdida val. 0.0843 | acc val. 0.9762 | acc prueba 0.9767
+[64x64_do0.1_lr0.015_es] Época 49/150 | pérdida ent. 0.0349 | pérdida val. 0.1125 | acc val. 0.9729 | acc prueba 0.9762
+[64x64_do0.1_lr0.015_es] Early stopping en la época 49; mejor época: 19
+[64x64_do0.1_lr0.015_es] fin: 49 épocas en 0.6 min | mejor época 19 | acc val. 0.9725 | acc prueba 0.9763
+[64x64_do0.1_lr0.005_es] Época 51/150 | pérdida ent. 0.0316 | pérdida val. 0.0907 | acc val. 0.9766 | acc prueba 0.9764
+[64x64_do0.1_lr0.005_es] Early stopping en la época 51; mejor época: 21
+[64x64_do0.1_lr0.005_es] fin: 51 épocas en 0.7 min | mejor época 21 | acc val. 0.9762 | acc prueba 0.9750
+
+>> Mejor learning rate: 0.01 (64x64_do0.1_lr0.01_es)
+
+####################################################################################################
+# Etapa: Etapa 3: aumento de datos (±2 px, ±10°) (4 corridas nuevas)
+####################################################################################################
+[64x64_do0.0_lr0.01_aug_es] inicio (55050 parámetros; cambios: epochs: 100 -> 150; early_stopping: no -> monitor=val_loss, patience=30, min_delta=0.0001, restore_best=True; augmentation: no -> max_shift=2, max_rotation=10.0, probability=1.0)
+[64x64_do0.1_lr0.01_aug_es] inicio (55050 parámetros; cambios: dropout: 0.0 -> 0.1; epochs: 100 -> 150; early_stopping: no -> monitor=val_loss, patience=30, min_delta=0.0001, restore_best=True; augmentation: no -> max_shift=2, max_rotation=10.0, probability=1.0)
+[64x64_do0.2_lr0.01_aug_es] inicio (55050 parámetros; cambios: dropout: 0.0 -> 0.2; epochs: 100 -> 150; early_stopping: no -> monitor=val_loss, patience=30, min_delta=0.0001, restore_best=True; augmentation: no -> max_shift=2, max_rotation=10.0, probability=1.0)
+[64x64_do0.4_lr0.01_aug_es] inicio (55050 parámetros; cambios: dropout: 0.0 -> 0.4; epochs: 100 -> 150; early_stopping: no -> monitor=val_loss, patience=30, min_delta=0.0001, restore_best=True; augmentation: no -> max_shift=2, max_rotation=10.0, probability=1.0)
+[64x64_do0.0_lr0.01_aug_es] Época 1/150 | pérdida ent. 0.5607 | pérdida val. 0.2257 | acc val. 0.9345 | acc prueba 0.9377
+[64x64_do0.1_lr0.01_aug_es] Época 1/150 | pérdida ent. 0.7152 | pérdida val. 0.2399 | acc val. 0.9305 | acc prueba 0.9312
+[64x64_do0.2_lr0.01_aug_es] Época 1/150 | pérdida ent. 0.8544 | pérdida val. 0.2466 | acc val. 0.9323 | acc prueba 0.9349
+[64x64_do0.4_lr0.01_aug_es] Época 1/150 | pérdida ent. 1.2021 | pérdida val. 0.3870 | acc val. 0.8993 | acc prueba 0.9041
+[64x64_do0.0_lr0.01_aug_es] Época 10/150 | pérdida ent. 0.1358 | pérdida val. 0.1066 | acc val. 0.9688 | acc prueba 0.9701
+[64x64_do0.2_lr0.01_aug_es] Época 10/150 | pérdida ent. 0.2947 | pérdida val. 0.1193 | acc val. 0.9632 | acc prueba 0.9659
+[64x64_do0.1_lr0.01_aug_es] Época 10/150 | pérdida ent. 0.2133 | pérdida val. 0.1093 | acc val. 0.9671 | acc prueba 0.9684
+[64x64_do0.4_lr0.01_aug_es] Época 10/150 | pérdida ent. 0.5374 | pérdida val. 0.1974 | acc val. 0.9434 | acc prueba 0.9475
+[64x64_do0.0_lr0.01_aug_es] Época 20/150 | pérdida ent. 0.1085 | pérdida val. 0.0743 | acc val. 0.9786 | acc prueba 0.9791
+[64x64_do0.2_lr0.01_aug_es] Época 20/150 | pérdida ent. 0.2543 | pérdida val. 0.1043 | acc val. 0.9666 | acc prueba 0.9699
+[64x64_do0.1_lr0.01_aug_es] Época 20/150 | pérdida ent. 0.1833 | pérdida val. 0.0908 | acc val. 0.9718 | acc prueba 0.9731
+[64x64_do0.4_lr0.01_aug_es] Época 20/150 | pérdida ent. 0.4782 | pérdida val. 0.1560 | acc val. 0.9573 | acc prueba 0.9567
+[64x64_do0.0_lr0.01_aug_es] Época 30/150 | pérdida ent. 0.0930 | pérdida val. 0.0722 | acc val. 0.9780 | acc prueba 0.9790
+[64x64_do0.2_lr0.01_aug_es] Época 30/150 | pérdida ent. 0.2337 | pérdida val. 0.0897 | acc val. 0.9732 | acc prueba 0.9742
+[64x64_do0.1_lr0.01_aug_es] Época 30/150 | pérdida ent. 0.1657 | pérdida val. 0.0777 | acc val. 0.9736 | acc prueba 0.9782
+[64x64_do0.4_lr0.01_aug_es] Época 30/150 | pérdida ent. 0.4396 | pérdida val. 0.1485 | acc val. 0.9571 | acc prueba 0.9630
+[64x64_do0.0_lr0.01_aug_es] Época 40/150 | pérdida ent. 0.0865 | pérdida val. 0.0720 | acc val. 0.9791 | acc prueba 0.9795
+[64x64_do0.2_lr0.01_aug_es] Época 40/150 | pérdida ent. 0.2257 | pérdida val. 0.0920 | acc val. 0.9729 | acc prueba 0.9739
+[64x64_do0.1_lr0.01_aug_es] Época 40/150 | pérdida ent. 0.1596 | pérdida val. 0.0723 | acc val. 0.9757 | acc prueba 0.9788
+[64x64_do0.4_lr0.01_aug_es] Época 40/150 | pérdida ent. 0.4404 | pérdida val. 0.1519 | acc val. 0.9557 | acc prueba 0.9594
+[64x64_do0.0_lr0.01_aug_es] Época 50/150 | pérdida ent. 0.0811 | pérdida val. 0.0659 | acc val. 0.9812 | acc prueba 0.9830
+[64x64_do0.2_lr0.01_aug_es] Época 50/150 | pérdida ent. 0.2151 | pérdida val. 0.0860 | acc val. 0.9727 | acc prueba 0.9758
+[64x64_do0.1_lr0.01_aug_es] Época 50/150 | pérdida ent. 0.1528 | pérdida val. 0.0732 | acc val. 0.9770 | acc prueba 0.9796
+[64x64_do0.4_lr0.01_aug_es] Época 50/150 | pérdida ent. 0.4249 | pérdida val. 0.1395 | acc val. 0.9568 | acc prueba 0.9631
+[64x64_do0.0_lr0.01_aug_es] Época 60/150 | pérdida ent. 0.0758 | pérdida val. 0.0625 | acc val. 0.9814 | acc prueba 0.9818
+[64x64_do0.2_lr0.01_aug_es] Época 60/150 | pérdida ent. 0.2099 | pérdida val. 0.0855 | acc val. 0.9746 | acc prueba 0.9781
+[64x64_do0.1_lr0.01_aug_es] Época 60/150 | pérdida ent. 0.1430 | pérdida val. 0.0717 | acc val. 0.9777 | acc prueba 0.9803
+[64x64_do0.4_lr0.01_aug_es] Época 60/150 | pérdida ent. 0.4089 | pérdida val. 0.1437 | acc val. 0.9563 | acc prueba 0.9602
+[64x64_do0.0_lr0.01_aug_es] Época 70/150 | pérdida ent. 0.0753 | pérdida val. 0.0749 | acc val. 0.9780 | acc prueba 0.9789
+[64x64_do0.2_lr0.01_aug_es] Época 70/150 | pérdida ent. 0.2050 | pérdida val. 0.0787 | acc val. 0.9754 | acc prueba 0.9761
+[64x64_do0.1_lr0.01_aug_es] Época 70/150 | pérdida ent. 0.1452 | pérdida val. 0.0719 | acc val. 0.9777 | acc prueba 0.9791
+[64x64_do0.4_lr0.01_aug_es] Época 70/150 | pérdida ent. 0.4032 | pérdida val. 0.1371 | acc val. 0.9589 | acc prueba 0.9638
+[64x64_do0.0_lr0.01_aug_es] Época 80/150 | pérdida ent. 0.0712 | pérdida val. 0.0621 | acc val. 0.9811 | acc prueba 0.9839
+[64x64_do0.2_lr0.01_aug_es] Época 80/150 | pérdida ent. 0.2010 | pérdida val. 0.0833 | acc val. 0.9752 | acc prueba 0.9771
+[64x64_do0.1_lr0.01_aug_es] Época 80/150 | pérdida ent. 0.1392 | pérdida val. 0.0646 | acc val. 0.9812 | acc prueba 0.9807
+[64x64_do0.4_lr0.01_aug_es] Época 80/150 | pérdida ent. 0.4017 | pérdida val. 0.1359 | acc val. 0.9598 | acc prueba 0.9647
+[64x64_do0.0_lr0.01_aug_es] Época 90/150 | pérdida ent. 0.0730 | pérdida val. 0.0692 | acc val. 0.9795 | acc prueba 0.9816
+[64x64_do0.2_lr0.01_aug_es] Época 90/150 | pérdida ent. 0.1939 | pérdida val. 0.0779 | acc val. 0.9761 | acc prueba 0.9786
+[64x64_do0.1_lr0.01_aug_es] Época 90/150 | pérdida ent. 0.1403 | pérdida val. 0.0611 | acc val. 0.9804 | acc prueba 0.9832
+[64x64_do0.4_lr0.01_aug_es] Época 90/150 | pérdida ent. 0.4030 | pérdida val. 0.1332 | acc val. 0.9584 | acc prueba 0.9631
+[64x64_do0.0_lr0.01_aug_es] Época 100/150 | pérdida ent. 0.0697 | pérdida val. 0.0576 | acc val. 0.9827 | acc prueba 0.9852
+[64x64_do0.2_lr0.01_aug_es] Época 100/150 | pérdida ent. 0.1970 | pérdida val. 0.0772 | acc val. 0.9762 | acc prueba 0.9784
+[64x64_do0.1_lr0.01_aug_es] Época 100/150 | pérdida ent. 0.1335 | pérdida val. 0.0619 | acc val. 0.9812 | acc prueba 0.9818
+[64x64_do0.4_lr0.01_aug_es] Época 100/150 | pérdida ent. 0.3896 | pérdida val. 0.1351 | acc val. 0.9591 | acc prueba 0.9643
+[64x64_do0.0_lr0.01_aug_es] Época 110/150 | pérdida ent. 0.0692 | pérdida val. 0.0569 | acc val. 0.9841 | acc prueba 0.9841
+[64x64_do0.2_lr0.01_aug_es] Época 110/150 | pérdida ent. 0.1935 | pérdida val. 0.0848 | acc val. 0.9736 | acc prueba 0.9766
+[64x64_do0.1_lr0.01_aug_es] Época 110/150 | pérdida ent. 0.1348 | pérdida val. 0.0631 | acc val. 0.9811 | acc prueba 0.9826
+[64x64_do0.4_lr0.01_aug_es] Época 110/150 | pérdida ent. 0.4000 | pérdida val. 0.1462 | acc val. 0.9537 | acc prueba 0.9594
+[64x64_do0.0_lr0.01_aug_es] Época 120/150 | pérdida ent. 0.0670 | pérdida val. 0.0577 | acc val. 0.9829 | acc prueba 0.9817
+[64x64_do0.2_lr0.01_aug_es] Época 120/150 | pérdida ent. 0.1912 | pérdida val. 0.0739 | acc val. 0.9780 | acc prueba 0.9778
+[64x64_do0.1_lr0.01_aug_es] Época 120/150 | pérdida ent. 0.1313 | pérdida val. 0.0649 | acc val. 0.9804 | acc prueba 0.9816
+[64x64_do0.4_lr0.01_aug_es] Época 120/150 | pérdida ent. 0.3855 | pérdida val. 0.1320 | acc val. 0.9577 | acc prueba 0.9631
+[64x64_do0.0_lr0.01_aug_es] Época 130/150 | pérdida ent. 0.0623 | pérdida val. 0.0555 | acc val. 0.9830 | acc prueba 0.9844
+[64x64_do0.2_lr0.01_aug_es] Época 130/150 | pérdida ent. 0.1887 | pérdida val. 0.0836 | acc val. 0.9755 | acc prueba 0.9766
+[64x64_do0.1_lr0.01_aug_es] Época 130/150 | pérdida ent. 0.1308 | pérdida val. 0.0656 | acc val. 0.9791 | acc prueba 0.9810
+[64x64_do0.4_lr0.01_aug_es] Época 130/150 | pérdida ent. 0.3859 | pérdida val. 0.1402 | acc val. 0.9566 | acc prueba 0.9611
+[64x64_do0.0_lr0.01_aug_es] Época 140/150 | pérdida ent. 0.0662 | pérdida val. 0.0604 | acc val. 0.9816 | acc prueba 0.9838
+[64x64_do0.2_lr0.01_aug_es] Época 140/150 | pérdida ent. 0.1859 | pérdida val. 0.0782 | acc val. 0.9761 | acc prueba 0.9780
+[64x64_do0.1_lr0.01_aug_es] Época 140/150 | pérdida ent. 0.1273 | pérdida val. 0.0595 | acc val. 0.9802 | acc prueba 0.9833
+[64x64_do0.4_lr0.01_aug_es] Época 140/150 | pérdida ent. 0.3784 | pérdida val. 0.1234 | acc val. 0.9625 | acc prueba 0.9652
+[64x64_do0.0_lr0.01_aug_es] Época 150/150 | pérdida ent. 0.0621 | pérdida val. 0.0565 | acc val. 0.9838 | acc prueba 0.9851
+[64x64_do0.0_lr0.01_aug_es] fin: 150 épocas en 15.8 min | mejor época 133 | acc val. 0.9838 | acc prueba 0.9856
+[64x64_do0.2_lr0.01_aug_es] Época 150/150 | pérdida ent. 0.1876 | pérdida val. 0.0781 | acc val. 0.9759 | acc prueba 0.9774
+[64x64_do0.2_lr0.01_aug_es] fin: 150 épocas en 16.0 min | mejor época 136 | acc val. 0.9775 | acc prueba 0.9805
+[64x64_do0.1_lr0.01_aug_es] Época 150/150 | pérdida ent. 0.1281 | pérdida val. 0.0589 | acc val. 0.9820 | acc prueba 0.9819
+[64x64_do0.1_lr0.01_aug_es] fin: 150 épocas en 16.1 min | mejor época 136 | acc val. 0.9834 | acc prueba 0.9836
+[64x64_do0.4_lr0.01_aug_es] Época 150/150 | pérdida ent. 0.3779 | pérdida val. 0.1254 | acc val. 0.9639 | acc prueba 0.9660
+[64x64_do0.4_lr0.01_aug_es] fin: 150 épocas en 16.2 min | mejor época 140 | acc val. 0.9625 | acc prueba 0.9652
+
+>> Configuración seleccionada para el pipeline final: 64x64_do0.0_lr0.01_aug_es
+
+####################################################################################################
+# Etapa: Pipeline final (64x64_do0.0_lr0.01_aug_es, hasta 300 épocas) (1 corridas nuevas)
+####################################################################################################
+[final] inicio (55050 parámetros; cambios: epochs: 100 -> 300; early_stopping: no -> monitor=val_loss, patience=50, min_delta=0.0001, restore_best=True; augmentation: no -> max_shift=2, max_rotation=10.0, probability=1.0)
+[final] Época 1/300 | pérdida ent. 0.5607 | pérdida val. 0.2257 | acc val. 0.9345 | acc prueba 0.9377
+[final] Época 10/300 | pérdida ent. 0.1358 | pérdida val. 0.1066 | acc val. 0.9688 | acc prueba 0.9701
+[final] Época 20/300 | pérdida ent. 0.1085 | pérdida val. 0.0743 | acc val. 0.9786 | acc prueba 0.9791
+[final] Época 30/300 | pérdida ent. 0.0930 | pérdida val. 0.0722 | acc val. 0.9780 | acc prueba 0.9790
+[final] Época 40/300 | pérdida ent. 0.0865 | pérdida val. 0.0720 | acc val. 0.9791 | acc prueba 0.9795
+[final] Época 50/300 | pérdida ent. 0.0811 | pérdida val. 0.0659 | acc val. 0.9812 | acc prueba 0.9830
+[final] Época 60/300 | pérdida ent. 0.0758 | pérdida val. 0.0625 | acc val. 0.9814 | acc prueba 0.9818
+[final] Época 70/300 | pérdida ent. 0.0753 | pérdida val. 0.0749 | acc val. 0.9780 | acc prueba 0.9789
+[final] Época 80/300 | pérdida ent. 0.0712 | pérdida val. 0.0621 | acc val. 0.9811 | acc prueba 0.9839
+[final] Época 90/300 | pérdida ent. 0.0730 | pérdida val. 0.0692 | acc val. 0.9795 | acc prueba 0.9816
+[final] Época 100/300 | pérdida ent. 0.0697 | pérdida val. 0.0576 | acc val. 0.9827 | acc prueba 0.9852
+[final] Época 110/300 | pérdida ent. 0.0692 | pérdida val. 0.0569 | acc val. 0.9841 | acc prueba 0.9841
+[final] Época 120/300 | pérdida ent. 0.0670 | pérdida val. 0.0577 | acc val. 0.9829 | acc prueba 0.9817
+[final] Época 130/300 | pérdida ent. 0.0623 | pérdida val. 0.0555 | acc val. 0.9830 | acc prueba 0.9844
+[final] Época 140/300 | pérdida ent. 0.0662 | pérdida val. 0.0604 | acc val. 0.9816 | acc prueba 0.9838
+[final] Época 150/300 | pérdida ent. 0.0621 | pérdida val. 0.0565 | acc val. 0.9838 | acc prueba 0.9851
+[final] Época 160/300 | pérdida ent. 0.0641 | pérdida val. 0.0533 | acc val. 0.9846 | acc prueba 0.9839
+[final] Época 170/300 | pérdida ent. 0.0610 | pérdida val. 0.0475 | acc val. 0.9846 | acc prueba 0.9840
+[final] Época 180/300 | pérdida ent. 0.0608 | pérdida val. 0.0486 | acc val. 0.9855 | acc prueba 0.9841
+[final] Época 190/300 | pérdida ent. 0.0578 | pérdida val. 0.0550 | acc val. 0.9845 | acc prueba 0.9836
+[final] Época 200/300 | pérdida ent. 0.0603 | pérdida val. 0.0527 | acc val. 0.9834 | acc prueba 0.9853
+[final] Época 210/300 | pérdida ent. 0.0585 | pérdida val. 0.0545 | acc val. 0.9834 | acc prueba 0.9836
+[final] Época 214/300 | pérdida ent. 0.0598 | pérdida val. 0.0540 | acc val. 0.9839 | acc prueba 0.9844
+[final] Early stopping en la época 214; mejor época: 164
+[final] fin: 214 épocas en 14.8 min | mejor época 164 | acc val. 0.9834 | acc prueba 0.9844
+
+====================================================================================================
+RANKING DE CONFIGURACIONES (ordenado por accuracy de prueba)
+====================================================================================================
+                     name         stage  val_acc  test_acc  delta_test_acc_pp  test_f1  best_epoch  epochs_run
+64x64_do0.0_lr0.01_aug_es  augmentation   0.9838    0.9856             0.9429   0.9856         133         150
+                    final         final   0.9834    0.9844             0.8143   0.9844         164         214
+64x64_do0.1_lr0.01_aug_es  augmentation   0.9834    0.9836             0.7429   0.9836         136         150
+64x64_do0.2_lr0.01_aug_es  augmentation   0.9775    0.9805             0.4286   0.9805         136         150
+    64x64_do0.1_lr0.01_es       dropout   0.9780    0.9769             0.0714   0.9769          47          77
+  64x64_do0.1_lr0.0075_es learning_rate   0.9752    0.9763             0.0071   0.9763          16          46
+   64x64_do0.1_lr0.015_es learning_rate   0.9725    0.9763             0.0071   0.9763          19          49
+                 baseline      baseline   0.9761    0.9762             0.0000   0.9762         100         100
+    64x64_do0.1_lr0.02_es learning_rate   0.9718    0.9756            -0.0571   0.9756          11          41
+   64x64_do0.1_lr0.005_es learning_rate   0.9762    0.9750            -0.1214   0.9750          21          51
+    64x64_do0.2_lr0.01_es       dropout   0.9748    0.9745            -0.1714   0.9745          41          71
+    64x64_do0.4_lr0.01_es       dropout   0.9671    0.9679            -0.8357   0.9678          70         100
+64x64_do0.4_lr0.01_aug_es  augmentation   0.9625    0.9652            -1.1000   0.9651         140         150
+
+Baseline re-entrenado con el mismo protocolo: accuracy de prueba = 0.9762
+Baseline reportado en el notebook (entrenado con los 56.000 ejemplos): 0.9787
+
+Configuraciones que superan al baseline (7):
+  64x64_do0.0_lr0.01_aug_es          +0.94 pp  ->  epochs: 100 -> 150; early_stopping: no -> monitor=val_loss, patience=30, min_delta=0.0001, restore_best=True; augmentation: no -> max_shift=2, max_rotation=10.0, probability=1.0
+  final                              +0.81 pp  ->  epochs: 100 -> 300; early_stopping: no -> monitor=val_loss, patience=50, min_delta=0.0001, restore_best=True; augmentation: no -> max_shift=2, max_rotation=10.0, probability=1.0
+  64x64_do0.1_lr0.01_aug_es          +0.74 pp  ->  dropout: 0.0 -> 0.1; epochs: 100 -> 150; early_stopping: no -> monitor=val_loss, patience=30, min_delta=0.0001, restore_best=True; augmentation: no -> max_shift=2, max_rotation=10.0, probability=1.0
+  64x64_do0.2_lr0.01_aug_es          +0.43 pp  ->  dropout: 0.0 -> 0.2; epochs: 100 -> 150; early_stopping: no -> monitor=val_loss, patience=30, min_delta=0.0001, restore_best=True; augmentation: no -> max_shift=2, max_rotation=10.0, probability=1.0
+  64x64_do0.1_lr0.01_es              +0.07 pp  ->  dropout: 0.0 -> 0.1; epochs: 100 -> 150; early_stopping: no -> monitor=val_loss, patience=30, min_delta=0.0001, restore_best=True
+  64x64_do0.1_lr0.0075_es            +0.01 pp  ->  dropout: 0.0 -> 0.1; learning_rate: 0.01 -> 0.0075; epochs: 100 -> 150; early_stopping: no -> monitor=val_loss, patience=30, min_delta=0.0001, restore_best=True
+  64x64_do0.1_lr0.015_es             +0.01 pp  ->  dropout: 0.0 -> 0.1; learning_rate: 0.01 -> 0.015; epochs: 100 -> 150; early_stopping: no -> monitor=val_loss, patience=30, min_delta=0.0001, restore_best=True
+
+Mejor configuración por etapa (según validación):
+  0_baseline         baseline                           val 0.9761 | prueba 0.9762 (+0.00 pp)
+  1_dropout          64x64_do0.1_lr0.01_es              val 0.9780 | prueba 0.9769 (+0.07 pp)
+  2_learning_rate    64x64_do0.1_lr0.01_es              val 0.9780 | prueba 0.9769 (+0.07 pp)
+  3_augmentation     64x64_do0.0_lr0.01_aug_es          val 0.9838 | prueba 0.9856 (+0.94 pp)
+  4_final            final                              val 0.9834 | prueba 0.9844 (+0.81 pp)
+
+====================================================================================================
+PIPELINE FINAL
+====================================================================================================
+Cambios frente al baseline: epochs: 100 -> 300; early_stopping: no -> monitor=val_loss, patience=50, min_delta=0.0001, restore_best=True; augmentation: no -> max_shift=2, max_rotation=10.0, probability=1.0
+Épocas entrenadas: 214 (early stopping: sí), época restaurada: 164
+Accuracy de prueba: 0.9844 vs baseline 0.9762 (+0.81 pp)
+F1 ponderado: 0.9844 vs baseline 0.9762
+Pérdida de prueba: 0.0511 vs baseline 0.1483 (mínimo del baseline: 0.0936)
+
+Tiempo total: 34.2 min. Resultados en: /Users/santim/Documents/Noveno Semestre/Redes /taller/taller_individual_fund_redes/experimentacion_mlp/resultados
